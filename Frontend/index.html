@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HR Vacation System</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>HR Vacation System</h1>
+    <form id="vacation-form">
+      <label for="vacation-type">Vacation Type:</label>
+      <select id="vacation-type">
+        <option value="annual">Annual</option>
+        <option value="sick">Sick</option>
+      </select>
+
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" required>
+
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" required>
+
+      <label for="days-requested">Days Requested:</label>
+      <input type="text" id="days-requested" readonly>
+
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Balance</th>
+        </tr>
+        <tr>
+          <td>Annual</td>
+          <td <span id="annual-balance"></span></td>
+        </tr>
+        <tr>
+          <td>Sick</td>
+          <td <span id="sick-balance"></span></td>
+        </tr>
+      </table>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- <h2>Balance: <span id="balance"></span> Days</h2> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
