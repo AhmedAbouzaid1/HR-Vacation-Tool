@@ -11,7 +11,6 @@ To get started with this project, follow these steps:
 
 ```
  pip install -r requirements.txt
-
 ```
 
 3. Create a Config/app.config file and specify the database connection details. You can use the current Config/app.config file as a template.
@@ -19,7 +18,6 @@ To get started with this project, follow these steps:
 
 ```
 python app.py
-
 ```
 
 5. Navigate to VacationBalanceManagerFrontend/index.html in your web browser to access the application.
@@ -85,7 +83,7 @@ The system implements the following user stories:
 
 ## Built With
 
-Python
-Flask
-Flask-RESTful
-Flask-CORS
+- Python
+- Flask
+- Flask-RESTful
+- Flask-CORS
