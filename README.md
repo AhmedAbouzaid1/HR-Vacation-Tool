@@ -69,6 +69,9 @@ The response will be a JSON object containing the duration of the vacation in da
 }
 ```
 
+## Class Diagram
+![alt text](https://github.com/AhmedAbouzaid1/HR-Vacation-Tool/blob/main/Class%20Diagram.JPG)
+
 ## User Stories
 
 The system implements the following user stories:
