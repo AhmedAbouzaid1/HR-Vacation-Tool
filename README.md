@@ -70,7 +70,7 @@ The response will be a JSON object containing the duration of the vacation in da
 ```
 
 ## Class Diagram
-![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/AhmedAbouzaid1/HR-Vacation-Tool/blob/main/Class%20Diagram.JPG))
+![alt text](https://github.com/AhmedAbouzaid1/HR-Vacation-Tool/blob/main/Class%20Diagram.JPG)
 
 ## User Stories
 
