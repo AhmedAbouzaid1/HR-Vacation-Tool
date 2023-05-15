@@ -29,13 +29,12 @@ db_connector.connect()
 # Create a QueryExecutor instance to execute queries on the database
 query_executor = QueryExecutor(db_connector.conn)
 
-# Define a route to handle vacation requests
 
-
+# Define a route to handle and display the vacation balance
 @app.route("/balanceManager", methods=['POST', 'GET'])
 def vacation_balance_manager():
     try:
-        # Check if the received request is a submission of the vacation form, or a get request to display the balance on load
+        # Check if the received request is a submission of the vacation form, or a get request to display the balance onload
         if request.method == 'POST':
             # Get the JSON data from the request
             data = request.json
