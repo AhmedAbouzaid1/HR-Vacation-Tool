@@ -32,9 +32,10 @@ query_executor = QueryExecutor(db_connector.conn)
 # Define a route to handle vacation requests
 
 
-@app.route("/balanceManager", methods=['POST'])
+@app.route("/balanceManager", methods=['POST', 'GET'])
 def vacation_balance_manager():
     try:
+        # Check if the received request is a submission of the vacation form, or a get request to display the balance on load
         if request.method == 'POST':
             # Get the JSON data from the request
             data = request.json
@@ -54,6 +55,16 @@ def vacation_balance_manager():
 
             # Return the updated balances as a JSON response
             return(jsonify(annual_balance, sick_balance))
+
+        else:  # Onload GET request handler
+            vacation_balance_handler = VacationBalanceHandler(query_executor)
+            annual_balance = vacation_balance_handler.get_vacation_balance(
+                'annual')
+            sick_balance = vacation_balance_handler.get_vacation_balance(
+                'sick')
+            print(annual_balance, sick_balance)
+            return(jsonify(annual_balance, sick_balance))
+
     except:
         # Return an error message if an exception occurs
         return(jsonify("Error occurred during handeling the vacation balance"))
