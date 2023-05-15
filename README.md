@@ -14,7 +14,8 @@ To get started with this project, follow these steps:
 ```
 
 3. Create a Config/app.config file and specify the database connection details. You can use the current Config/app.config file as a template.
-4. Run the Flask app using the following command:
+4. Execute VacationBalanceManagerDatabase/SetupQuery.sql in your MYSQL Workbench.
+5. Run the Flask app using the following command:
 
 ```
 python app.py
