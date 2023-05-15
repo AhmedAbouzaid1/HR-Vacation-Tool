@@ -28,6 +28,11 @@ window.onload = function() {
 endDateInput.addEventListener('change', () => {
     event.preventDefault();
 
+    if (endDateInput.value < startDateInput.value) {
+        alert("End date cannot be earlier than the start date!");
+        return;
+    }
+    
     const xhr = new XMLHttpRequest();
     xhr.open('POST', "http://127.0.0.1:8000/calculateDuration");
     xhr.setRequestHeader('Content-Type', 'application/json');
