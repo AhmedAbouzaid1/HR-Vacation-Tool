@@ -7,6 +7,22 @@ const annualBalanceSpan = document.getElementById('annual-balance');
 const sickBalanceSpan = document.getElementById('sick-balance');
 
 
+window.onload = function() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', "http://127.0.0.1:8000/balanceManager");
+    
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            const response = JSON.parse(xhr.response);
+            annualBalanceSpan.textContent = response[0];
+            sickBalanceSpan.textContent = response[1];
+        } else {
+            console.error('Error:', xhr.statusText);
+        }
+    };
+    
+    xhr.send();
+};
 
 
 endDateInput.addEventListener('change', () => {
@@ -51,21 +67,5 @@ vacationForm.addEventListener('submit', (event) => {
         vacationType: vacationType.value
     }));
 
-
-//   const xhr = new XMLHttpRequest();
-//   xhr.open('POST', '/submit');
-//   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//   xhr.send(`vacation-type=${vacationType.value}&start-date=${startDate.value}&end-date=${endDate.value}`);
-//   const vacationType = document.getElementById('vacation-type').value;
-//   const startDate = new Date(startDateInput.value);
-//   const endDate = new Date(endDateInput.value);
-//   let daysRequested = parseInt(daysRequestedInput.value);
-
-//   // Deduct vacation days
-//   let balance = parseInt(balanceSpan.textContent);
-//   balance -= daysRequested;
-//   balanceSpan.textContent = balance;
-
-  // Reset form
-  vacationForm.reset();
+    vacationForm.reset();
 });
