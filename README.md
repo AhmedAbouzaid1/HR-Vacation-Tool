@@ -71,7 +71,7 @@ The response will be a JSON object containing the duration of the vacation in da
 ```
 
 ## Class Diagram
-![alt text](https://github.com/AhmedAbouzaid1/HR-Vacation-Tool/blob/main/VacationAppClassDiagram.png)
+![alt text](https://github.com/AhmedAbouzaid1/HR-Vacation-Tool/blob/main/VacationAppClassDiagram.jpg)
 
 ## User Stories
 
